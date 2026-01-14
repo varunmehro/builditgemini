@@ -1,0 +1,15 @@
+.codeContainer {
+    flex: 1;
+    background: #1e1e1e;
+    /* Dark theme for code */
+    color: #d4d4d4;
+    overflow: auto;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    height: 100%;
+}
+
+.codeContainer pre {
+    margin: 0;
+}

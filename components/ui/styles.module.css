@@ -1,0 +1,76 @@
+.header {
+    font-weight: 700;
+    margin-bottom: var(--gap-md);
+    color: hsl(var(--foreground));
+}
+
+.text {
+    color: hsl(var(--foreground-muted));
+    margin-bottom: var(--gap-md);
+    line-height: 1.6;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+    margin-bottom: var(--gap-md);
+}
+
+.label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: hsl(var(--foreground));
+}
+
+.input {
+    /* Inherits from global usually, but specific here if needed */
+    width: 100%;
+}
+
+.button {
+    padding: 12px 24px;
+    border-radius: var(--radius-md);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.1s;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+.primary {
+    background: hsl(var(--primary));
+    color: white;
+}
+
+.secondary {
+    background: var(--surface-hover);
+    color: hsl(var(--foreground));
+}
+
+.statsCard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: var(--gap-lg);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.statsLabel {
+    font-size: 0.9rem;
+    color: hsl(var(--foreground-muted));
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statsValue {
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(var(--foreground));
+}

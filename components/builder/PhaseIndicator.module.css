@@ -1,0 +1,63 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 24px;
+    background: var(--bg-app);
+    border-bottom: 1px dotted var(--border-strong);
+    overflow-x: auto;
+    gap: 4px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.3;
+    transition: all 0.3s;
+    flex-shrink: 0;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+}
+
+.step.active {
+    opacity: 1;
+    border: 1px dashed var(--accent-color);
+    background: rgba(215, 25, 33, 0.1);
+    /* Subtle red glow */
+}
+
+.step.completed {
+    opacity: 0.7;
+    text-decoration: line-through;
+    text-decoration-color: var(--accent-color);
+}
+
+.circle {
+    display: none;
+    /* Remove circles for technical text look */
+}
+
+.label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+
+.active .label {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.active .label::before {
+    content: "> ";
+    /* Terminal prefix */
+}
+
+.line {
+    display: none;
+    /* No connecting lines, just raw steps */
+}

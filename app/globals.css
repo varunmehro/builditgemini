@@ -1,0 +1,149 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Jersey+10&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Nothing OS Light Palette */
+  --bg-app: #e6e6e6;
+  --bg-sidebar: #f2f2f2;
+  --bg-surface: #ffffff;
+
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --text-tertiary: #a3a3a3;
+
+  --border-subtle: #d4d4d4;
+  --border-strong: #000000;
+  --border-active: #d71921;
+
+  /* The Signature Red */
+  --accent-color: #D71921;
+  --accent-hover: #b01218;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Radius (Minimal) */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+
+  /* Grid/Technical */
+  --grid-color: rgba(0, 0, 0, 0.05);
+}
+
+.dark {
+  /* Nothing OS Dark Palette */
+  --bg-app: #0a0a0a;
+  --bg-sidebar: #000000;
+  --bg-surface: #111111;
+
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --text-tertiary: #444444;
+
+  --border-subtle: #333333;
+  --border-strong: #555555;
+  --border-active: #ffffff;
+
+  --grid-color: rgba(255, 255, 255, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  font-family: 'Roboto Mono', monospace;
+  /* Default technical font */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  /* Dot Grid Background Effect */
+  background-image: radial-gradient(var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Scrollbar Polish (Hidden/Minimal) */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Typography Utilities */
+.text-sm {
+  font-size: 0.75rem;
+}
+
+.text-base {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.font-dot {
+  font-family: 'Jersey 10', sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.font-mono {
+  font-family: 'Roboto Mono', monospace;
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+/* Utility Animations */
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}

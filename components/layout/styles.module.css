@@ -1,0 +1,109 @@
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: var(--bg-sidebar);
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-subtle);
+    font-family: 'Roboto Mono', monospace;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    padding: 0 8px;
+}
+
+.logoIcon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--text-primary);
+    background: transparent;
+    color: var(--text-primary);
+    border-radius: 0;
+    /* No radius */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.newChatBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--text-primary);
+    color: var(--bg-sidebar);
+    padding: 12px;
+    border-radius: 0;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: opacity 0.2s;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+.newChatBtn:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Specific override ensuring lucide icons inside don't mess up color */
+.newChatBtn :global(svg) {
+    stroke: currentColor;
+}
+
+.section {
+    margin-bottom: 32px;
+}
+
+.sectionTitle {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: 12px;
+    padding: 0 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 0;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.1s;
+    font-size: 0.9rem;
+    border: 1px solid transparent;
+}
+
+.navItem:hover {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px dashed var(--text-tertiary);
+}
+
+/* Code Viewer */
+.codeContainer {
+    flex: 1;
+    background: #000;
+    color: #e5e5e5;
+    overflow: auto;
+    padding: 16px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    border-left: 1px solid var(--border-subtle);
+}
